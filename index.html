@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Mağaza</title>
-    <!-- PWA va Manifest ulanishi -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#075e54">
     <link rel="stylesheet" href="style.css">
@@ -19,13 +18,13 @@
         <h1 id="shop-title">Online Mağaza</h1>
     </header>
 
-    <!-- Kategoriyalar -->
+    <!-- Kategoriyalar (Dinamik tillar bilan) -->
     <div class="categories">
-        <button onclick="filterCategory('all')" id="btn-all">Barchasi</button>
-        <button onclick="filterCategory('fruits')" id="btn-fruits">Meva/Sabzavot</button>
-        <button onclick="filterCategory('drinks')" id="btn-drinks">Ichimliklar</button>
-        <button onclick="filterCategory('bakery')" id="btn-bakery">Non mahsulotlari</button>
-        <button onclick="filterCategory('dairy')" id="btn-dairy">Sut mahsulotlari</button>
+        <button onclick="filterCategory('all')" id="btn-all">Tümü / Wszystkie</button>
+        <button onclick="filterCategory('fruits')" id="btn-fruits">Meyve / Owoce</button>
+        <button onclick="filterCategory('drinks')" id="btn-drinks">İçecekler / Napoje</button>
+        <button onclick="filterCategory('bakery')" id="btn-bakery">Fırın / Pieczywo</button>
+        <button onclick="filterCategory('dairy')" id="btn-dairy">Süt / Nabiał</button>
     </div>
 
     <!-- Mahsulotlar ro'yxati -->
@@ -35,12 +34,12 @@
 
     <!-- Savatcha qismi -->
     <div class="cart-container">
-        <h2 id="cart-title">Savatcha</h2>
+        <h2 id="cart-title">Sepet</h2>
         <div id="cart-items"></div>
         <div class="cart-total">
-            <span id="total-text">Jami:</span> <span id="total-price">0</span> zł
+            <span id="total-text">Toplam:</span> <span id="total-price">0</span> zł
         </div>
-        <button onclick="sendToWhatsApp()" id="whatsapp-btn" class="wa-button">WhatsApp orqali buyurtma berish</button>
+        <button onclick="sendToWhatsApp()" id="whatsapp-btn" class="wa-button">WhatsApp ile Sipariş Ver</button>
     </div>
 
     <script src="app.js"></script>
