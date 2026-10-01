@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="lang-switch">
+            <button onclick="setLanguage('tr')" class="lang-btn active" id="btn-tr">Türkçe 🇹🇷</button>
+            <button onclick="setLanguage('pl')" class="lang-btn" id="btn-pl">Polski 🇵🇱</button>
+        </div>
+        <h1 id="shop-title">Online Mağaza</h1>
+        <p id="shop-subtitle">En taze ürünler kapınızda!</p>
+    </header>
+
+    <!-- Kategoriya tugmalari -->
+    <nav class="categories">
+        <button class="cat-btn active" onclick="filterCategory('all')" id="cat-all">Tümü</button>
+        <button class="cat-btn" onclick="filterCategory('fruits')" id="cat-fruits">Meyve & Sebze</button>
+        <button class="cat-btn" onclick="filterCategory('drinks')" id="cat-drinks">İçecekler</button>
+        <button class="cat-btn" onclick="filterCategory('bakery')" id="cat-bakery">Fırın & Unlu</button>
+        <button class="cat-btn" onclick="filterCategory('dairy')" id="cat-dairy">Süt Ürünleri</button>
+    </nav>
+
+    <main>
+        <section id="products" class="product-grid">
+            <!-- Mahsulotlar shu yerga yuklanadi -->
+        </section>
+    </main>
+
+    <div id="cart" class="cart-container">
+        <h2><span id="cart-title">Sepet</span> (<span id="cart-count">0</span>)</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <strong id="total-title">Toplam: </strong><span id="total-price">0</span> PLN
+        </div>
+        <button id="whatsapp-btn" onclick="sendToWhatsApp()" class="order-btn">
+            WhatsApp ile Sipariş Ver
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
