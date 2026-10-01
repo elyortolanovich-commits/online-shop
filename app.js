@@ -1,8 +1,32 @@
 const products = [
-    { id: 1, category: 'fruits', name: { tr: 'Elma', pl: 'Jabłko' }, price: 5, img: 'https://cdn-icons-png.flaticon.com/512/415/415733.png' },
-    { id: 2, category: 'drinks', name: { tr: 'Su', pl: 'Woda' }, price: 2, img: 'https://cdn-icons-png.flaticon.com/512/3105/3105805.png' },
-    { id: 3, category: 'bakery', name: { tr: 'Ekmek', pl: 'Chleb' }, price: 4, img: 'https://cdn-icons-png.flaticon.com/512/3014/3014513.png' },
-    { id: 4, category: 'dairy', name: { tr: 'Süt', pl: 'Mleko' }, price: 6, img: 'https://cdn-icons-png.flaticon.com/512/2674/2674177.png' }
+    { 
+        id: 1, 
+        category: 'fruits', 
+        name: { tr: 'Elma (Taze)', pl: 'Jabłko (Świeże)' }, 
+        price: 5, 
+        img: 'https://cdn-icons-png.flaticon.com/512/415/415733.png' 
+    },
+    { 
+        id: 2, 
+        category: 'drinks', 
+        name: { tr: 'İçme Suyu 1.5L', pl: 'Woda 1.5L' }, 
+        price: 3, 
+        img: 'https://cdn-icons-png.flaticon.com/512/3105/3105805.png' 
+    },
+    { 
+        id: 3, 
+        category: 'bakery', 
+        name: { tr: 'Taze Ekmek', pl: 'Świeży Chleb' }, 
+        price: 4, 
+        img: 'https://cdn-icons-png.flaticon.com/512/3014/3014513.png' 
+    },
+    { 
+        id: 4, 
+        category: 'dairy', 
+        name: { tr: 'Günlük Süt 1L', pl: 'Mleko 1L' }, 
+        price: 6, 
+        img: 'https://cdn-icons-png.flaticon.com/512/2674/2674177.png' 
+    }
 ];
 
 let currentLang = 'tr';
