@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Online Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Online Mağaza</title>
+    <!-- PWA va Manifest ulanishi -->
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#075e54">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="lang-switch">
-            <button onclick="setLanguage('tr')" class="lang-btn active" id="btn-tr">Türkçe 🇹🇷</button>
-            <button onclick="setLanguage('pl')" class="lang-btn" id="btn-pl">Polski 🇵🇱</button>
+            <button onclick="setLanguage('tr')">🇹🇷 TR</button>
+            <button onclick="setLanguage('pl')">🇵🇱 PL</button>
         </div>
         <h1 id="shop-title">Online Mağaza</h1>
-        <p id="shop-subtitle">En taze ürünler kapınızda!</p>
     </header>
 
-    <!-- Kategoriya tugmalari -->
-    <nav class="categories">
-        <button class="cat-btn active" onclick="filterCategory('all')" id="cat-all">Tümü</button>
-        <button class="cat-btn" onclick="filterCategory('fruits')" id="cat-fruits">Meyve & Sebze</button>
-        <button class="cat-btn" onclick="filterCategory('drinks')" id="cat-drinks">İçecekler</button>
-        <button class="cat-btn" onclick="filterCategory('bakery')" id="cat-bakery">Fırın & Unlu</button>
-        <button class="cat-btn" onclick="filterCategory('dairy')" id="cat-dairy">Süt Ürünleri</button>
-    </nav>
+    <!-- Kategoriyalar -->
+    <div class="categories">
+        <button onclick="filterCategory('all')" id="btn-all">Barchasi</button>
+        <button onclick="filterCategory('fruits')" id="btn-fruits">Meva/Sabzavot</button>
+        <button onclick="filterCategory('drinks')" id="btn-drinks">Ichimliklar</button>
+        <button onclick="filterCategory('bakery')" id="btn-bakery">Non mahsulotlari</button>
+        <button onclick="filterCategory('dairy')" id="btn-dairy">Sut mahsulotlari</button>
+    </div>
 
-    <main>
-        <section id="products" class="product-grid">
-            <!-- Mahsulotlar shu yerga yuklanadi -->
-        </section>
+    <!-- Mahsulotlar ro'yxati -->
+    <main id="product-list" class="product-grid">
+        <!-- JavaScript orqali mahsulotlar chiqadi -->
     </main>
 
-    <div id="cart" class="cart-container">
-        <h2><span id="cart-title">Sepet</span> (<span id="cart-count">0</span>)</h2>
+    <!-- Savatcha qismi -->
+    <div class="cart-container">
+        <h2 id="cart-title">Savatcha</h2>
         <div id="cart-items"></div>
         <div class="cart-total">
-            <strong id="total-title">Toplam: </strong><span id="total-price">0</span> PLN
+            <span id="total-text">Jami:</span> <span id="total-price">0</span> zł
         </div>
-        <button id="whatsapp-btn" onclick="sendToWhatsApp()" class="order-btn">
-            WhatsApp ile Sipariş Ver
-        </button>
+        <button onclick="sendToWhatsApp()" id="whatsapp-btn" class="wa-button">WhatsApp orqali buyurtma berish</button>
     </div>
 
     <script src="app.js"></script>
